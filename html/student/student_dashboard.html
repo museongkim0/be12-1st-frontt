@@ -18,7 +18,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link href="./files/css2" rel="stylesheet">
+    <link href="/files/css/css2" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
@@ -32,7 +32,7 @@
     // JavaScript로 header.html을 동적으로 로드
 
 
-    fetch("new_sidebar.html")
+    fetch("/html/common/new_sidebar.html")
         .then(response => response.text())
         .then(data => {
           document.getElementById("header").innerHTML = data;
@@ -749,8 +749,10 @@
               <img class="size-11 transition-transform duration-500 ease-in-out hover:rotate-[360deg]" src="./files/app-logo.svg" alt="logo">
             </a>
           </div>
+
+
           <div class="sidebar-panel">
-          <div class="flex h-full grow flex-col bg-white pl-[var(--main-sidebar-width)] dark:bg-navy-750" style="padding-right: 20px; margin-left:15px;">
+            <div class="flex h-full grow flex-col bg-white pl-[var(--main-sidebar-width)] dark:bg-navy-750" style="padding-right: 20px; margin-left:15px;">
             <!-- Sidebar Panel Header -->
             <div class="flex h-18 w-full items-center justify-between pl-4 pr-1" >
               <p class="text-base tracking-wider text-slate-800 dark:text-navy-100">
@@ -948,7 +950,7 @@
             
             
 
-          </div>
+            </div>
           </div>
 
           
