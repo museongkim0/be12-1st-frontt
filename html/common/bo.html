@@ -10,10 +10,10 @@
     <link rel="icon" type="image/png" href="https://lineone.piniastudio.com/images/favicon.png">
 
     <!-- CSS Assets -->
-    <link rel="stylesheet" href="/files/css/app.css">
+    <link rel="stylesheet" href="./files/app.css">
 
     <!-- Javascript Assets -->
-    <script src="/files/js/app.js.다운로드" defer=""></script>
+    <script src="./files/app.js.다운로드" defer=""></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -709,20 +709,7 @@ rect.legend-mouseover-inactive,
 .apexcharts-rangebar-goals-markers {
   pointer-events: none
 }
-</style>
-<link rel="shortcut icon" href="https://social.webestica.com/assets/images/favicon.ico">
-
-	<!-- Google Font -->
-	<link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link rel="stylesheet" href="./css2">
-
-	<!-- Plugins CSS -->
-	<link rel="stylesheet" type="text/css" href="./all.min.css">
-	<link rel="stylesheet" type="text/css" href="./bootstrap-icons.css">
-
-  <!-- Theme CSS -->
-	<link rel="stylesheet" type="text/css" href="./style(2).css">
-	 </head>
+</style></head>
 
   <body x-data="" class="is-header-blur" x-bind="$store.global.documentBody">
     <!-- App preloader-->
@@ -2761,84 +2748,656 @@ rect.legend-mouseover-inactive,
             <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
             </svg>
-            <h2 class="text-xl font-medium text-slate-700 line-clamp-1 dark:text-navy-50">
+            <h2 class="text-xl font-medium text-slate-700 line-clamp-2 dark:text-navy-50 -top-px">
               New Post
             </h2>
-          </div>
-          <div class="flex justify-center space-x-2">
-            <button class="btn min-w-[7rem] border border-slate-300 font-medium text-slate-700 hover:bg-slate-150 focus:bg-slate-150 active:bg-slate-150/80 dark:border-navy-450 dark:text-navy-100 dark:hover:bg-navy-500 dark:focus:bg-navy-500 dark:active:bg-navy-500/90">
-              Preview
-            </button>
-            <button class="btn min-w-[7rem] bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
-              Save
-            </button>
-          </div>
-        </div>
-                <div class="col-span-12 lg:col-span-8">
+                </div>
+        <div class="grid grid-cols-12 gap-4 sm:gap-5 lg:gap-6">
+          <div class="col-span-12 lg:col-span-8">
             <div class="card">
               <div class="tabs flex flex-col">
                 <div class="is-scrollbar-hidden overflow-x-auto">
                   <div class="border-b-2 border-slate-150 dark:border-navy-500">
                     <div class="tabs-list -mb-0.5 flex">
                       <button class="btn h-14 shrink-0 space-x-2 rounded-none border-b-2 border-primary px-4 font-medium text-primary dark:border-accent dark:text-accent-light sm:px-5">
-                        <i class="fa-solid fa-layer-group text-base"></i>
-                        <span>General</span>
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-6 5h6m-6 4h6M10 3v4h4V3h-4Z"/>
+                        </svg>
+                        
+                        <span>게시판</span>
                       </button>
                       <button class="btn h-14 shrink-0 space-x-2 rounded-none border-b-2 border-transparent px-4 font-medium hover:text-slate-800 focus:text-slate-800 dark:hover:text-navy-100 dark:focus:text-navy-100 sm:px-5">
-                        <i class="fa-solid fa-tags text-base"></i>
-                        <span>Meta Tags</span>
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h3a3 3 0 0 0 0-6h-.025a5.56 5.56 0 0 0 .025-.5A5.5 5.5 0 0 0 7.207 9.021C7.137 9.017 7.071 9 7 9a4 4 0 1 0 0 8h2.167M12 19v-9m0 0-2 2m2-2 2 2"/>
+                        </svg>                        
+                        <span>과제제출</span>
                       </button>
                       <button class="btn h-14 shrink-0 space-x-2 rounded-none border-b-2 border-transparent px-4 font-medium hover:text-slate-800 focus:text-slate-800 dark:hover:text-navy-100 dark:focus:text-navy-100 sm:px-5">
-                        <i class="fa-solid fa-bars-staggered text-base"></i>
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 18V6h-5v12h5Zm0 0h2M4 18h2.5m3.5-5.5V12M6 6l7-2v16l-7-2V6Z"/>
+                        </svg>
                         <span> Keywords </span>
                       </button>
                     </div>
                   </div>
                 </div>
                 <div class="tab-content p-4 sm:p-5">
-                  <div class="space-y-5">
-                    <label class="block">
-                      <span class="font-medium text-slate-600 dark:text-navy-100">Title</span>
-                      <input class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent" placeholder="Enter title" type="text">
-                    </label>
-                    <label class="block">
-                      <span class="font-medium text-slate-600 dark:text-navy-100">Caption</span>
-                      <input class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent" placeholder="Enter post caption" type="text">
-                    </label>
-                    <div class="container">
-                        <div class="row g-4">
-                          <!-- Main content START -->
-                          <div class="col-lg-8">
-                            <div class="bg-mode p-4">
-                              <h1 class="h4 mb-4">New Posts</h1>
-                    <div class="card bg-transparent border-3">
-                        <div class="row g-3">
-                          <div class="col-4">
-                            <!-- Blog image -->
-                            <img class="rounded" src="./03.jpg" alt="">
-                          </div>
-                          <div class="col-8">
-                            <!-- Blog caption -->
-                            <a href="https://social.webestica.com/blog.html#" class="badge bg-danger bg-opacity-10 text-danger mb-2 fw-bold">데이터베이스</a>
-                            <h5><a href="https://social.webestica.com/blog-details.html" class="btn-link stretched-link text-reset fw-bold">모름</a></h5>
-                            <div class="d-none d-sm-inline-block">
-                              <p class="mb-2">나도모름</p>
-                              <!-- BLog date -->
-                              <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m11.5 11.5 2.071 1.994M4 10h5m11 0h-1.5M12 7V4M7 7V4m10 3V4m-7 13H8v-2l5.227-5.292a1.46 1.46 0 0 1 2.065 2.065L10 17Zm-5 3h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
-                              </svg>Jan 21, 2024
-                            </div>
-                          </div>
+                   <!-- List -->
+                <div
+                class="list-group list-group-flush border-top border-bottom mb-7"
+              >
+                <div class="list-group-item py-7 px-0">
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        class="text-reset"
+                        href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#!"
+                      >
+                        <h3 class="fs-6">
+                          이거 모르겠어요
+                        </h3>
+                        <p class="text-body-secondary">
+                          아무나 알려줘어어
+                        </p>
+                      </a>
+                      <div class="d-flex align-items-center">
+                        <div class="fs-sm text-body-secondary me-3">
+                          December 12, 2024
+                        </div>
+                        <div class="dropdown">
+                          <a
+                            class="fs-lg text-reset"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="material-symbols-outlined"
+                              >12기_김유진</span
+                            >
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
                         </div>
                       </div>
-            
-                   
+                    </div>
+                    <div class="col-auto">
+                      <div class="avatar avatar-xl rounded">
+                        <img
+                          class="avatar-img"
+                          src="./project-1.png"
+                          alt="..."
+                        />
+                      </div>
+                    </div>
                   </div>
+                </div>
+
+                <div class="list-group-item py-7 px-0">
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        class="text-reset"
+                        href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#!"
+                      >
+                        <h3 class="fs-6">배고파</h3>
+                        <p class="text-body-secondary">
+                          점심 밥 메뉴 추천 좀
+                        </p>
+                      </a>
+                      <div class="d-flex align-items-center">
+                        <div class="fs-sm text-body-secondary me-3">
+                           September 10, 2024
+                        </div>
+                        <div class="dropdown">
+                          <a
+                            class="fs-lg text-reset"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="material-symbols-outlined"
+                              >12기_김무성</span
+                            >
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="list-group-item py-7 px-0">
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        class="text-reset"
+                        href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#!"
+                      >
+                        <h3 class="fs-6">HTTP하는 법</h3>
+                        <p class="text-body-secondary">
+                          이렇게 하는게 맞나?
+                        </p>
+                      </a>
+                      <div class="d-flex align-items-center">
+                        <div class="fs-sm text-body-secondary me-3">
+                          January 8, 2025
+                        </div>
+                        <div class="dropdown">
+                          <a
+                            class="fs-lg text-reset"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="material-symbols-outlined"
+                              >12기_이우진</span
+                            >
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="list-group-item py-7 px-0">
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        class="text-reset"
+                        href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#!"
+                      >
+                        <h3 class="fs-6">하기 싫은데</h3>
+                        <p class="text-body-secondary">
+                          대신 해줘
+                        </p>
+                      </a>
+                      <div class="d-flex align-items-center">
+                        <div class="fs-sm text-body-secondary me-3">
+                          April 6, 2024
+                        </div>
+                        <div class="dropdown">
+                          <a
+                            class="fs-lg text-reset"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="material-symbols-outlined"
+                              >12기_김정엽</span
+                            >
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="avatar avatar-xl rounded">
+                        <img
+                          class="avatar-img"
+                          src="./project-2.png"
+                          alt="..."
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="list-group-item py-7 px-0">
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        class="text-reset"
+                        href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#!"
+                      >
+                        <h3 class="fs-6">고양이 볼래?</h3>
+                        <p class="text-body-secondary">
+                          귀엽다...
+                        </p>
+                      </a>
+                      <div class="d-flex align-items-center">
+                        <div class="fs-sm text-body-secondary me-3">
+                          November 5, 2024
+                        </div>
+                        <div class="dropdown">
+                          <a
+                            class="fs-lg text-reset"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="material-symbols-outlined"
+                              >12기_오건하</span
+                            >
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="avatar avatar-xl rounded">
+                        <img
+                          class="avatar-img"
+                          src="./project-3.png"
+                          alt="..."
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="list-group-item py-7 px-0">
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        class="text-reset"
+                        href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#!"
+                      >
+                        <h3 class="fs-6">Introduction to TypeScript</h3>
+                        <p class="text-body-secondary">
+                          TypeScript brings static typing to JavaScript. In
+                          this post, we delve into its core features and setup
+                          process.
+                        </p>
+                      </a>
+                      <div class="d-flex align-items-center">
+                        <div class="fs-sm text-body-secondary me-3">
+                          Published on September 3, 2024
+                        </div>
+                        <div class="dropdown">
+                          <a
+                            class="fs-lg text-reset"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="material-symbols-outlined"
+                              >more_horiz</span
+                            >
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="list-group-item py-7 px-0">
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        class="text-reset"
+                        href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#!"
+                      >
+                        <h3 class="fs-6">
+                          Building Reusable Components in React
+                        </h3>
+                        <p class="text-body-secondary">
+                          Learn how to build modular, reusable components in
+                          React to enhance code maintainability and
+                          scalability.
+                        </p>
+                      </a>
+                      <div class="d-flex align-items-center">
+                        <div class="fs-sm text-body-secondary me-3">
+                          Published on September 1, 2024
+                        </div>
+                        <div class="dropdown">
+                          <a
+                            class="fs-lg text-reset"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="material-symbols-outlined"
+                              >more_horiz</span
+                            >
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="list-group-item py-7 px-0">
+                  <div class="row">
+                    <div class="col">
+                      <a 
+                        class="text-reset"
+                        href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#!"
+                      >
+                        <h3 class="fs-6">
+                          Introduction to Docker for Beginners
+                        </h3>
+                        <p class="text-body-secondary">
+                          Docker is an essential tool for developers. Discover
+                          how to containerize applications and improve your
+                          development workflow.
+                        </p>
+                      </a>
+                      <div class="d-flex align-items-center">
+                        <div class="fs-sm text-body-secondary me-3">
+                          Published on August 30, 2024
+                        </div>
+                        <div class="dropdown">
+                          <a
+                            class="fs-lg text-reset"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="material-symbols-outlined"
+                              >more_horiz</spang
+                            >
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="list-group-item py-7 px-0">
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        class="text-reset"
+                        href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#!"
+                      >
+                        <h3 class="fs-6">
+                          REST vs GraphQL: Which to Choose?
+                        </h3>
+                        <p class="text-body-secondary">
+                          A comparison between REST and GraphQL APIs,
+                          discussing their advantages and limitations in
+                          different use cases.
+                        </p>
+                      </a>
+                      <div class="d-flex align-items-center">
+                        <div class="fs-sm text-body-secondary me-3">
+                          Published on August 28, 2024
+                        </div>
+                        <div class="dropdown">
+                          <a
+                            class="fs-lg text-reset"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="material-symbols-outlined"
+                              >more_horiz</span
+                            >
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="list-group-item py-7 px-0">
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        class="text-reset"
+                        href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#!"
+                      >
+                        <h3 class="fs-6">Deploying Applications on AWS</h3>
+                        <p class="text-body-secondary">
+                          AWS offers a variety of services to deploy scalable
+                          applications. Learn the basics of EC2, S3, and
+                          Lambda deployment.
+                        </p>
+                      </a>
+                      <div class="d-flex align-items-center">
+                        <div class="fs-sm text-body-secondary me-3">
+                          Published on August 25, 2024
+                        </div>
+                        <div class="dropdown">
+                          <a
+                            class="fs-lg text-reset"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="material-symbols-outlined"
+                              >more_horiz</span
+                            >
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="https://yevgenysim-turkey.github.io/dashbrd/posts/posts.html#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
                 </div>
               </div>
             </div>
           </div>
-                </div>
+          
+          </div>
+        </div>
       </main>
     </div>
     <!-- 
