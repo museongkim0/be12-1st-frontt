@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://lineone.piniastudio.com/form-layout-4.html -->
+<html lang="ko" class="translated-ltr" style="--vh: 9.450000000000001px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta tags  -->
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>Lineone - Layout v4에서</title>
+    <link rel="icon" type="image/png" href="https://lineone.piniastudio.com/images/favicon.png">
+
+    <!-- CSS Assets -->
+    <link rel="stylesheet" href="./files/app.css">
+
+    <!-- Javascript Assets -->
+    <script src="./files/app.js.다운로드" defer=""></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./files/css2" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="./files/m=el_main_css"></head>
+        
+<link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script>
+      /**
+       * THIS SCRIPT REQUIRED FOR PREVENT FLICKERING IN SOME BROWSERS
+       */
+      localStorage.getItem("_x_darkMode_on") === "true" &&
+        document.documentElement.classList.add("dark");
+      document.addEventListener("DOMContentLoaded", function() {
+        new TomSelect("#tomselect-2", {
+            create: false,
+            sortField: { field: 'text', direction: 'asc' }
+        });
+    });
+    </script>
+
+ 
+  <body x-data="" class="is-header-blur" x-bind="$store.global.documentBody">
+    <!-- App preloader-->
+    <main class="main-content w-full px-[var(--margin-x)] pb-8">
+      <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <div class="grid grid-cols-6 gap-1 sm:gap-5 lg:gap-4" style="height: 500; width: 600px;">
+          <div class="col-span-12 lg:col-span-8">
+            <div class="card">
+              <div class="tabs flex flex-col">
+                <div class="is-scrollbar-hidden overflow-x-auto">
+                  <div class="border-b-2 border-slate-150 dark:border-navy-500">
+                    <div class="tabs-list -mb-0.5 flex">
+                      <button class="btn h-14 shrink-0 space-x-2 rounded-none border-b-2 border-primary px-4 font-medium text-primary dark:border-accent dark:text-accent-light sm:px-5">
+                        <i class="fa-solid fa-layer-group text-base"></i>
+                        <span> 휴가,외출,조퇴 신청서</span>
+                      </button>
+                       
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-content p-4 sm:p-5">
+                  <div class="space-y-5">
+                    <label class="block">
+                      <span class="font-medium text-slate-600 dark:text-navy-100">Title</span>
+                      <input class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent" placeholder="Enter post title" type="text">
+                    </label>
+  
+                    <label class="block">
+                      <span class="font-medium text-slate-600 dark:text-navy-100">Category</span>
+                      <select id="tomselect-2" class="mt-1.5 w-full">
+                          <option value="">Select the category</option>
+                          <option value="digital">휴가</option>
+                          <option value="technology">조퇴</option>
+                          <option value="home">외출</option>
+                      </select>
+                   </label>
+                   
+                    <div  >
+                      <span class="font-medium text-slate-600 dark:text-navy-100">내용</span>
+                      <div class="mt-1.5 w-full">
+                        <div class="ql-editor ql-blank" contenteditable="true" placeholder="글적어라 " style="background-color: beige;"><p><br></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex justify-center space-x-2">
+                    
+                      <button type="submit" class="btn min-w-[7rem] bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
+                        저장
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+      
+      
+    </main>
+   </body></html>
