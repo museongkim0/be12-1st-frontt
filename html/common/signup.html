@@ -10,10 +10,10 @@
     <link rel="icon" type="image/png" href="https://lineone.piniastudio.com/images/favicon.png">
 
     <!-- CSS Assets -->
-    <link rel="stylesheet" href="./files/app.css">
+    <link rel="stylesheet" href="/files/css/app.css">
 
     <!-- Javascript Assets -->
-    <script src="./Lineone - files/app.js.다운로드" defer=""></script>
+    <script src="/files/js/app.js.다운로드" defer=""></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -36,7 +36,7 @@
       <main class="grid w-full grow grid-cols-1 place-items-center">
         <div class="w-full max-w-[26rem] p-4 sm:px-5">
           <div class="text-center">
-            <img class="mx-auto size-16" src="./files/app-logo.svg" alt="logo">
+            <img class="mx-auto size-16" src="/files/images/logo/app-logo.svg" alt="logo">
             <div class="mt-4">
               <h2 class="text-2xl font-semibold text-slate-600 dark:text-navy-100">
                 Welcome To Edulink
@@ -108,8 +108,34 @@
         @see https://alpinejs.dev/directives/teleport
       -->
     <div id="x-teleport-target"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
       window.addEventListener("DOMContentLoaded", () => Alpine.start());
+      const joinUser =  async () => {
+        await axios 
+                .post('https://ae8ec952-de4a-4ea3-8ce6-4ad3a62e9db5.mock.pstmn.io/joinTest',
+                  {
+                    name : "오건하",
+                    email : "dhrjsgk0405@gmail.com",
+                    password : "qwer1234",
+                    birth : "2000-04-05", 
+                  }
+                 )
+                .then((response) => {
+                  console.log(response);
+                  if(response.data.result === "success"){
+                    console.log("회원가입 성공 !");
+                    return response.data;
+                  }else {
+                    console.log("회원가입 실패 !");
+                    return response.data;
+                  }
+                })
+                .catch((error) => {
+                  console.error('Error fetching data:', error);
+                })
+      }
+      joinUser();
     </script>
   
 
