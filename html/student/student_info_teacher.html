@@ -38,7 +38,9 @@
 
 
 
-    </script><script type="text/javascript" src="./files/b50b7f30-3efc-40a4-958b-47c84a6ef83f" data-awssuidacr="ad535d2e-b803-4be0-8eaf-349f41700588"></script><script type="text/javascript" src="./files/afde4f0c-4096-4aeb-b345-d1aea539851b"></script>
+    </script>
+    <script type="text/javascript" src="./files/b50b7f30-3efc-40a4-958b-47c84a6ef83f" data-awssuidacr="ad535d2e-b803-4be0-8eaf-349f41700588"></script>
+    <script type="text/javascript" src="./files/afde4f0c-4096-4aeb-b345-d1aea539851b"></script>
   <style id="apexcharts-css">@keyframes opaque {
   0% {
     opacity: 0
@@ -2771,12 +2773,27 @@ rect.legend-mouseover-inactive,
         @see https://alpinejs.dev/directives/teleport
       -->
     <div id="x-teleport-target"></div>
+
     <script>
       window.addEventListener("DOMContentLoaded", () => Alpine.start());
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <script>
+      axios
+        .get('https://fbfb4bdc-f04e-4b20-a8bd-9e6c4c603788.mock.pstmn.io/manager_student_info')
+        .then((response) => {
+        console.log(response.data); // 응답 데이터
+        })
+        .catch((error) => {
+        console.error('Error fetching data:', error);
+        });
+    </script>
   
 
-<svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><script>(() => {
+<svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg>
+<script>(() => {
         window.addoncropExtensions = window.addoncropExtensions || [];
         window.addoncropExtensions.push({
             mode: 'emulator',
@@ -2789,7 +2806,9 @@ rect.legend-mouseover-inactive,
             },
             flixmateConnected: false,
         });
-    })();</script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+    })();
+  </script>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
       div.grammarly-desktop-integration {
         position: absolute;
         width: 1px;
