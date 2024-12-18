@@ -3158,6 +3158,57 @@
       </div>
     </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script>
+    const getCurriculum = async () => {
+      await axios
+        .get(`https://example.com/api/curriculum/`/*,{withCredentials: true// 나중에 배울거라고 함. 일단 더미 코드}*/
+        )
+        .then((response) => {
+          return response.data.curriculum;
+        })
+        .catch((error) => {
+          console.error('Error fetching data: ', error);
+        });
+    }
+
+    const getAttendence = async () => {
+      await axios
+        .get(`https://example.com/api/attendence/`)
+        .then((response) => {
+          return response.data.attendence;
+        })
+        .catch((error) => {
+          console.error('Error fetching data: ', error);
+        });
+    }
+
+    const getHomework = async () => {
+      await axios
+        .get(`https://example.com/api/homework/`)
+        .then((response) => {
+          return response.data.homework;
+        })
+        .catch((error) => {
+          console.error('Error fetching data: ', error);
+        });
+    }
+
+    const getAskBoard = async () => {
+      await axios
+        .get(`https://example.com/api/ask/`)
+        .then((response) => {
+          return response.data.ask;
+        })
+        .catch((error) => {
+          console.error('Error fetching data: ', error);
+        });
+    }
+    
+
+  </script>
 </body>
 
 </html>
