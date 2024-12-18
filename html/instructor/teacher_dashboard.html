@@ -2849,7 +2849,23 @@ rect.legend-mouseover-inactive,
             },
             flixmateConnected: false,
         });
-    })();</script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+    })();</script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+      const getClass = async () => {
+      await axios
+        .get(`https://example.com/api/class/`/*,{withCredentials: true// 나중에 배울거라고 함. 일단 더미 코드}*/
+        )
+        .then((response) => {
+          return response.data.class;
+        })
+        .catch((error) => {
+          console.error('Error fetching data: ', error);
+        });
+      }
+    </script>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
       div.grammarly-desktop-integration {
         position: absolute;
         width: 1px;
