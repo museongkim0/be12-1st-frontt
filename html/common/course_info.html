@@ -1,69 +1,73 @@
 <!DOCTYPE html>
 <!-- saved from url=(0056)https://lineone.piniastudio.com/dashboards-personal.html -->
-<html lang="en" foxified="" style="--vh: 7.3px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta tags  -->
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<html lang="en" foxified="" style="--vh: 7.3px;">
 
-    <title>수업 상세정보</title>
-    <link rel="icon" type="image/png" href="https://lineone.piniastudio.com/images/favicon.png">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta tags  -->
 
-    <!-- CSS Assets -->
-    <link rel="stylesheet" href="/files/css/app.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-    <!-- Javascript Assets -->
-    <script src="/files/js/app.js.다운로드" defer=""></script>
+  <title>수업 상세정보</title>
+  <link rel="icon" type="image/png" href="https://lineone.piniastudio.com/images/favicon.png">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link href="/files/css/css2" rel="stylesheet">
+  <!-- CSS Assets -->
+  <link rel="stylesheet" href="/files/css/app.css">
+
+  <!-- Javascript Assets -->
+  <script src="/files/js/app.js.다운로드" defer=""></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="/files/css/css2" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
-    
+
     /**
      * THIS SCRIPT REQUIRED FOR PREVENT FLICKERING IN SOME BROWSERS
      */
     localStorage.getItem("_x_darkMode_on") === "true" &&
       document.documentElement.classList.add("dark");
-      
+
     // JavaScript로 header.html을 동적으로 로드
 
 
     fetch("/html/common/new_sidebar.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("header").innerHTML = data;
-              
-        })
-        .catch(error => console.error('Error loading header:', error));
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
 
-        const currentDate = new Date();
-  const dayOfMonth = currentDate.getDate(); // 현재 날짜 (1~31)
+      })
+      .catch(error => console.error('Error loading header:', error));
 
-  console.log("현재 날짜:", currentDate); // 현재 날짜 출력하여 확인
+    const currentDate = new Date();
+    const dayOfMonth = currentDate.getDate(); // 현재 날짜 (1~31)
 
-  // 모든 타임라인 항목을 순회하며 반짝이는 효과를 적용합니다.
-  for (let i = 1; i <= 12; i++) { // 12일까지 확인
-    const dayElement = document.getElementById(`day-${i}`);
+    console.log("현재 날짜:", currentDate); // 현재 날짜 출력하여 확인
 
-    if (dayElement) { // dayElement가 존재할 때만 실행
-      const spanElement = dayElement.querySelector('span');
+    // 모든 타임라인 항목을 순회하며 반짝이는 효과를 적용합니다.
+    for (let i = 1; i <= 12; i++) { // 12일까지 확인
+      const dayElement = document.getElementById(`day-${i}`);
 
-      if (spanElement) {
-        if (i === dayOfMonth) {
-          // 오늘 날짜에 해당하는 항목만 애니메이션을 추가
-          console.log(`Day ${i} is animating`); // 디버깅: 반짝이는 날짜 확인
-          spanElement.classList.add('animate-ping');
-        } else {
-          // 다른 날짜는 애니메이션을 제거
-          spanElement.classList.remove('animate-ping');
+      if (dayElement) { // dayElement가 존재할 때만 실행
+        const spanElement = dayElement.querySelector('span');
+
+        if (spanElement) {
+          if (i === dayOfMonth) {
+            // 오늘 날짜에 해당하는 항목만 애니메이션을 추가
+            console.log(`Day ${i} is animating`); // 디버깅: 반짝이는 날짜 확인
+            spanElement.classList.add('animate-ping');
+          } else {
+            // 다른 날짜는 애니메이션을 제거
+            spanElement.classList.remove('animate-ping');
+          }
         }
       }
     }
-  }
 
   </script>
   <style id="apexcharts-css">
@@ -755,8 +759,8 @@
 
 <body x-data="" class="is-header-blur" x-bind="$store.global.documentBody">
   <!-- App preloader-->
-  
-  
+
+
   <!-- Page Wrapper -->
   <div id="root" class="min-h-1vh flex grow bg-slate-50 dark:bg-navy-900">
     <!-- Sidebar -->
@@ -769,215 +773,220 @@
           <!-- Application Logo -->
           <div class="flex pt-4">
             <a href="/html/instructor/course_info.html">
-              <img class="size-11 transition-transform duration-500 ease-in-out hover:rotate-[360deg]" src="/files/images/logo/app-logo.svg" alt="logo">
+              <img class="size-11 transition-transform duration-500 ease-in-out hover:rotate-[360deg]"
+                src="/files/images/logo/app-logo.svg" alt="logo">
             </a>
           </div>
           <div class="sidebar-panel">
-          <div class="flex h-full grow flex-col bg-white pl-[var(--main-sidebar-width)] dark:bg-navy-750" style="padding-right: 20px;">
-            <!-- Sidebar Panel Header -->
-            <div class="flex h-18 w-full items-center justify-between pl-4 pr-1" >
-              <p class="text-base tracking-wider text-slate-800 dark:text-navy-100">
-                기반 기술
-              </p>
-              <button @click="$store.global.isSidebarExpanded = false" class="btn size-7 rounded-full p-0 text-primary hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:text-accent-light/80 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25 xl:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                </svg>
-              </button>
+            <div class="flex h-full grow flex-col bg-white pl-[var(--main-sidebar-width)] dark:bg-navy-750"
+              style="padding-right: 20px;">
+              <!-- Sidebar Panel Header -->
+              <div class="flex h-18 w-full items-center justify-between pl-4 pr-1">
+                <p class="text-base tracking-wider text-slate-800 dark:text-navy-100">
+                  기반 기술
+                </p>
+                <button @click="$store.global.isSidebarExpanded = false"
+                  class="btn size-7 rounded-full p-0 text-primary hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:text-accent-light/80 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25 xl:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                  </svg>
+                </button>
+              </div>
+
+              <ol class="timeline line-space max-w-sm" id="timeline">
+                <!-- 1일차: 반짝이는 효과 -->
+                <li class="timeline-item" id="day-1">
+                  <div class="timeline-item-point rounded-full bg-red-500 relative">
+                    <span
+                      class="inline-flex h-full w-full animate-ping absolute bg-red-300 opacity-80 rounded-full"></span>
+                  </div>
+                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
+                        Linux 환경 설정
+                      </p>
+                      <span class="text-xs text-slate-400 dark:text-navy-300">1일차</span>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 2일차 -->
+                <li class="timeline-item" id="day-2">
+                  <div class="timeline-item-point rounded-full bg-blue-500 relative">
+                    <span class="inline-flex h-full w-full absolute bg-blue-300 opacity-80 rounded-full"></span>
+                  </div>
+                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
+                        Linux 환경 설정
+                      </p>
+                      <span class="text-xs text-slate-400 dark:text-navy-300">2일차</span>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 3일차 -->
+                <li class="timeline-item" id="day-3">
+                  <div class="timeline-item-point rounded-full bg-green-500 relative">
+                    <span class="inline-flex h-full w-full absolute bg-green-300 opacity-80 rounded-full"></span>
+                  </div>
+                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
+                        Linux 환경 설정
+                      </p>
+                      <span class="text-xs text-slate-400 dark:text-navy-300">3일차</span>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 4일차 -->
+                <li class="timeline-item" id="day-4">
+                  <div class="timeline-item-point rounded-full bg-yellow-500 relative">
+                    <span class="inline-flex h-full w-full absolute bg-yellow-300 opacity-80 rounded-full"></span>
+                  </div>
+                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
+                        Linux 환경 설정
+                      </p>
+                      <span class="text-xs text-slate-400 dark:text-navy-300">4일차</span>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 5일차 -->
+                <li class="timeline-item" id="day-5">
+                  <div class="timeline-item-point rounded-full bg-purple-500 relative">
+                    <span class="inline-flex h-full w-full absolute bg-purple-300 opacity-80 rounded-full"></span>
+                  </div>
+                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
+                        Linux 환경 설정
+                      </p>
+                      <span class="text-xs text-slate-400 dark:text-navy-300">5일차</span>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 6일차 -->
+                <li class="timeline-item" id="day-6">
+                  <div class="timeline-item-point rounded-full bg-pink-500 relative">
+                    <span class="inline-flex h-full w-full absolute bg-pink-300 opacity-80 rounded-full"></span>
+                  </div>
+                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
+                        Linux 환경 설정
+                      </p>
+                      <span class="text-xs text-slate-400 dark:text-navy-300">6일차</span>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 7일차 -->
+                <li class="timeline-item" id="day-7">
+                  <div class="timeline-item-point rounded-full bg-pink-600 relative">
+                    <span class="inline-flex h-full w-full absolute bg-pink-400 opacity-80 rounded-full"></span>
+                  </div>
+                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
+                        Linux 환경 설정
+                      </p>
+                      <span class="text-xs text-slate-400 dark:text-navy-300">7일차</span>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 8일차 -->
+                <li class="timeline-item" id="day-8">
+                  <div class="timeline-item-point rounded-full bg-indigo-500 relative">
+                    <span class="inline-flex h-full w-full absolute bg-indigo-300 opacity-80 rounded-full"></span>
+                  </div>
+                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
+                        Linux 환경 설정
+                      </p>
+                      <span class="text-xs text-slate-400 dark:text-navy-300">8일차</span>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 9일차 -->
+                <li class="timeline-item" id="day-9">
+                  <div class="timeline-item-point rounded-full bg-slate-500 relative">
+                    <span class="inline-flex h-full w-full absolute bg-slate-300 opacity-80 rounded-full"></span>
+                  </div>
+                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
+                        Linux 환경 설정
+                      </p>
+                      <span class="text-xs text-slate-400 dark:text-navy-300">9일차</span>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 10일차 -->
+                <li class="timeline-item" id="day-10">
+                  <div class="timeline-item-point rounded-full bg-gray-500 relative">
+                    <span class="inline-flex h-full w-full absolute bg-gray-300 opacity-80 rounded-full"></span>
+                  </div>
+                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
+                        Linux 환경 설정
+                      </p>
+                      <span class="text-xs text-slate-400 dark:text-navy-300">10일차</span>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 11일차 -->
+                <li class="timeline-item" id="day-11">
+                  <div class="timeline-item-point rounded-full bg-green-500 relative">
+                    <span class="inline-flex h-full w-full absolute bg-teal-300 opacity-80 rounded-full"></span>
+                  </div>
+                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
+                        Linux 환경 설정
+                      </p>
+                      <span class="text-xs text-slate-400 dark:text-navy-300">11일차</span>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 12일차 -->
+                <li class="timeline-item" id="day-12">
+                  <div class="timeline-item-point rounded-full bg-purple-500 relative">
+                    <span class="inline-flex h-full w-full absolute bg-orange-300 opacity-80 rounded-full"></span>
+                  </div>
+                  <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
+                    <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
+                      <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
+                        Linux 환경 설정
+                      </p>
+                      <span class="text-xs text-slate-400 dark:text-navy-300">12일차</span>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+
+
+
+
             </div>
-
-            <ol class="timeline line-space max-w-sm" id="timeline">
-              <!-- 1일차: 반짝이는 효과 -->
-              <li class="timeline-item" id="day-1">
-                <div class="timeline-item-point rounded-full bg-red-500 relative">
-                  <span class="inline-flex h-full w-full animate-ping absolute bg-red-300 opacity-80 rounded-full"></span>
-                </div>
-                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                    <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                      Linux 환경 설정
-                    </p>
-                    <span class="text-xs text-slate-400 dark:text-navy-300">1일차</span>
-                  </div>
-                </div>
-              </li>
-            
-              <!-- 2일차 -->
-              <li class="timeline-item" id="day-2">
-                <div class="timeline-item-point rounded-full bg-blue-500 relative">
-                  <span class="inline-flex h-full w-full absolute bg-blue-300 opacity-80 rounded-full"></span>
-                </div>
-                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                    <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                      Linux 환경 설정
-                    </p>
-                    <span class="text-xs text-slate-400 dark:text-navy-300">2일차</span>
-                  </div>
-                </div>
-              </li>
-            
-              <!-- 3일차 -->
-              <li class="timeline-item" id="day-3">
-                <div class="timeline-item-point rounded-full bg-green-500 relative">
-                  <span class="inline-flex h-full w-full absolute bg-green-300 opacity-80 rounded-full"></span>
-                </div>
-                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                    <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                      Linux 환경 설정
-                    </p>
-                    <span class="text-xs text-slate-400 dark:text-navy-300">3일차</span>
-                  </div>
-                </div>
-              </li>
-            
-              <!-- 4일차 -->
-              <li class="timeline-item" id="day-4">
-                <div class="timeline-item-point rounded-full bg-yellow-500 relative">
-                  <span class="inline-flex h-full w-full absolute bg-yellow-300 opacity-80 rounded-full"></span>
-                </div>
-                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                    <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                      Linux 환경 설정
-                    </p>
-                    <span class="text-xs text-slate-400 dark:text-navy-300">4일차</span>
-                  </div>
-                </div>
-              </li>
-            
-              <!-- 5일차 -->
-              <li class="timeline-item" id="day-5">
-                <div class="timeline-item-point rounded-full bg-purple-500 relative">
-                  <span class="inline-flex h-full w-full absolute bg-purple-300 opacity-80 rounded-full"></span>
-                </div>
-                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                    <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                      Linux 환경 설정
-                    </p>
-                    <span class="text-xs text-slate-400 dark:text-navy-300">5일차</span>
-                  </div>
-                </div>
-              </li>
-            
-              <!-- 6일차 -->
-              <li class="timeline-item" id="day-6">
-                <div class="timeline-item-point rounded-full bg-pink-500 relative">
-                  <span class="inline-flex h-full w-full absolute bg-pink-300 opacity-80 rounded-full"></span>
-                </div>
-                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                    <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                      Linux 환경 설정
-                    </p>
-                    <span class="text-xs text-slate-400 dark:text-navy-300">6일차</span>
-                  </div>
-                </div>
-              </li>
-            
-              <!-- 7일차 -->
-              <li class="timeline-item" id="day-7">
-                <div class="timeline-item-point rounded-full bg-pink-600 relative">
-                  <span class="inline-flex h-full w-full absolute bg-pink-400 opacity-80 rounded-full"></span>
-                </div>
-                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                    <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                      Linux 환경 설정
-                    </p>
-                    <span class="text-xs text-slate-400 dark:text-navy-300">7일차</span>
-                  </div>
-                </div>
-              </li>
-            
-              <!-- 8일차 -->
-              <li class="timeline-item" id="day-8">
-                <div class="timeline-item-point rounded-full bg-indigo-500 relative">
-                  <span class="inline-flex h-full w-full absolute bg-indigo-300 opacity-80 rounded-full"></span>
-                </div>
-                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                    <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                      Linux 환경 설정
-                    </p>
-                    <span class="text-xs text-slate-400 dark:text-navy-300">8일차</span>
-                  </div>
-                </div>
-              </li>
-            
-              <!-- 9일차 -->
-              <li class="timeline-item" id="day-9">
-                <div class="timeline-item-point rounded-full bg-slate-500 relative">
-                  <span class="inline-flex h-full w-full absolute bg-slate-300 opacity-80 rounded-full"></span>
-                </div>
-                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                    <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                      Linux 환경 설정
-                    </p>
-                    <span class="text-xs text-slate-400 dark:text-navy-300">9일차</span>
-                  </div>
-                </div>
-              </li>
-            
-              <!-- 10일차 -->
-              <li class="timeline-item" id="day-10">
-                <div class="timeline-item-point rounded-full bg-gray-500 relative">
-                  <span class="inline-flex h-full w-full absolute bg-gray-300 opacity-80 rounded-full"></span>
-                </div>
-                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                    <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                      Linux 환경 설정
-                    </p>
-                    <span class="text-xs text-slate-400 dark:text-navy-300">10일차</span>
-                  </div>
-                </div>
-              </li>
-            
-              <!-- 11일차 -->
-              <li class="timeline-item" id="day-11">
-                <div class="timeline-item-point rounded-full bg-green-500 relative">
-                  <span class="inline-flex h-full w-full absolute bg-teal-300 opacity-80 rounded-full"></span>
-                </div>
-                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                    <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                      Linux 환경 설정
-                    </p>
-                    <span class="text-xs text-slate-400 dark:text-navy-300">11일차</span>
-                  </div>
-                </div>
-              </li>
-            
-              <!-- 12일차 -->
-              <li class="timeline-item" id="day-12">
-                <div class="timeline-item-point rounded-full bg-purple-500 relative">
-                  <span class="inline-flex h-full w-full absolute bg-orange-300 opacity-80 rounded-full"></span>
-                </div>
-                <div class="timeline-item-content flex-1 pl-4 sm:pl-8">
-                  <div class="flex flex-col justify-between pb-2 sm:flex-row sm:pb-0">
-                    <p class="pb-2 font-medium leading-none text-slate-600 dark:text-navy-100 sm:pb-0">
-                      Linux 환경 설정
-                    </p>
-                    <span class="text-xs text-slate-400 dark:text-navy-300">12일차</span>
-                  </div>
-                </div>
-              </li>
-            </ol>
-            
-            
-            
-
-          </div>
           </div>
 
           <!-- Main Sections Links -->
-          
+
           <!-- Bottom Links -->
-          
+
         </div>
       </div>
       <div class="sidebar-panel">```
@@ -1360,66 +1369,39 @@
                     <div
                       class="swiper-slide relative flex h-28 w-48 flex-col overflow-hidden rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 p-3">
                       <div x-data="{showModal:false}">
-                        <button
-                          @click="showModal = true"
-                          class="btn bg-slate-150 font-medium text-slate-800 hover:bg-slate-200 focus:bg-slate-200 active:bg-slate-200/80 dark:bg-navy-500 dark:text-navy-50 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90"
-                        >
+                        <button @click="showModal = true"
+                          class="btn bg-slate-150 font-medium text-slate-800 hover:bg-slate-200 focus:bg-slate-200 active:bg-slate-200/80 dark:bg-navy-500 dark:text-navy-50 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90">
                           출석
                         </button>
                         <template x-teleport="#x-teleport-target">
                           <div
                             class="fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden px-4 py-6 sm:px-5"
-                            x-show="showModal"
-                            role="dialog"
-                            @keydown.window.escape="showModal = false"
-                          >
-                            <div
-                              class="absolute inset-0 bg-slate-900/60 transition-opacity duration-300"
-                              @click="showModal = false"
-                              x-show="showModal"
-                              x-transition:enter="ease-out"
-                              x-transition:enter-start="opacity-0"
-                              x-transition:enter-end="opacity-100"
-                              x-transition:leave="ease-in"
-                              x-transition:leave-start="opacity-100"
-                              x-transition:leave-end="opacity-0"
-                            ></div>
+                            x-show="showModal" role="dialog" @keydown.window.escape="showModal = false">
+                            <div class="absolute inset-0 bg-slate-900/60 transition-opacity duration-300"
+                              @click="showModal = false" x-show="showModal" x-transition:enter="ease-out"
+                              x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                              x-transition:leave="ease-in" x-transition:leave-start="opacity-100"
+                              x-transition:leave-end="opacity-0"></div>
                             <div
                               class="relative max-w-lg rounded-lg bg-white px-4 py-10 text-center transition-opacity duration-300 dark:bg-navy-700 sm:px-5"
-                              x-show="showModal"
-                              x-transition:enter="ease-out"
-                              x-transition:enter-start="opacity-0"
-                              x-transition:enter-end="opacity-100"
-                              x-transition:leave="ease-in"
-                              x-transition:leave-start="opacity-100"
-                              x-transition:leave-end="opacity-0"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="inline size-28 text-success"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                                ></path>
+                              x-show="showModal" x-transition:enter="ease-out" x-transition:enter-start="opacity-0"
+                              x-transition:enter-end="opacity-100" x-transition:leave="ease-in"
+                              x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="inline size-28 text-success" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                               </svg>
-                    
+
                               <div class="mt-4" style="width: 200px;">
                                 <h2 class="text-2xl text-slate-700 dark:text-navy-100">
                                   출석 완료
                                 </h2>
                                 <p class="mt-2">
-                                  
+
                                 </p>
-                                <button
-                                  @click="showModal = false"
-                                  class="btn mt-6 bg-success font-medium text-white hover:bg-success-focus focus:bg-success-focus active:bg-success-focus/90"
-                                >
+                                <button @click="showModal = false"
+                                  class="btn mt-6 bg-success font-medium text-white hover:bg-success-focus focus:bg-success-focus active:bg-success-focus/90">
                                   Close
                                 </button>
                               </div>
@@ -1427,83 +1409,57 @@
                           </div>
                         </template>
                       </div>
-                      
+
                       <div class="mask is-reuleaux-triangle absolute top-0 right-0 -m-3 size-16 bg-white/20"></div>
-                    </div><div
-                    class="swiper-slide relative flex h-28 w-48 flex-col overflow-hidden rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 p-3">
-                    <div x-data="{showModal:false}">
-                      <button
-                        @click="showModal = true"
-                        class="btn bg-slate-150 font-medium text-slate-800 hover:bg-slate-200 focus:bg-slate-200 active:bg-slate-200/80 dark:bg-navy-500 dark:text-navy-50 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90"
-                      >
-                        퇴실
-                      </button>
-                      <template x-teleport="#x-teleport-target">
-                        <div
-                          class="fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden px-4 py-6 sm:px-5"
-                          x-show="showModal"
-                          role="dialog"
-                          @keydown.window.escape="showModal = false"
-                        >
+                    </div>
+                    <div
+                      class="swiper-slide relative flex h-28 w-48 flex-col overflow-hidden rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 p-3">
+                      <div x-data="{showModal:false}">
+                        <button @click="showModal = true"
+                          class="btn bg-slate-150 font-medium text-slate-800 hover:bg-slate-200 focus:bg-slate-200 active:bg-slate-200/80 dark:bg-navy-500 dark:text-navy-50 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90">
+                          퇴실
+                        </button>
+                        <template x-teleport="#x-teleport-target">
                           <div
-                            class="absolute inset-0 bg-slate-900/60 transition-opacity duration-300"
-                            @click="showModal = false"
-                            x-show="showModal"
-                            x-transition:enter="ease-out"
-                            x-transition:enter-start="opacity-0"
-                            x-transition:enter-end="opacity-100"
-                            x-transition:leave="ease-in"
-                            x-transition:leave-start="opacity-100"
-                            x-transition:leave-end="opacity-0"
-                          ></div>
-                          <div
-                            class="relative max-w-lg rounded-lg bg-white px-4 py-10 text-center transition-opacity duration-300 dark:bg-navy-700 sm:px-5"
-                            x-show="showModal"
-                            x-transition:enter="ease-out"
-                            x-transition:enter-start="opacity-0"
-                            x-transition:enter-end="opacity-100"
-                            x-transition:leave="ease-in"
-                            x-transition:leave-start="opacity-100"
-                            x-transition:leave-end="opacity-0"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              class="inline size-28 text-success"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                              ></path>
-                            </svg>
-                  
-                            <div class="mt-4" style="width: 200px;">
-                              <h2 class="text-2xl text-slate-700 dark:text-navy-100">
-                                퇴실 완료
-                              </h2>
-                              <p class="mt-2">
-                                
-                              </p>
-                              <button
-                                @click="showModal = false"
-                                class="btn mt-6 bg-success font-medium text-white hover:bg-success-focus focus:bg-success-focus active:bg-success-focus/90"
-                              >
-                                Close
-                              </button>
+                            class="fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden px-4 py-6 sm:px-5"
+                            x-show="showModal" role="dialog" @keydown.window.escape="showModal = false">
+                            <div class="absolute inset-0 bg-slate-900/60 transition-opacity duration-300"
+                              @click="showModal = false" x-show="showModal" x-transition:enter="ease-out"
+                              x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                              x-transition:leave="ease-in" x-transition:leave-start="opacity-100"
+                              x-transition:leave-end="opacity-0"></div>
+                            <div
+                              class="relative max-w-lg rounded-lg bg-white px-4 py-10 text-center transition-opacity duration-300 dark:bg-navy-700 sm:px-5"
+                              x-show="showModal" x-transition:enter="ease-out" x-transition:enter-start="opacity-0"
+                              x-transition:enter-end="opacity-100" x-transition:leave="ease-in"
+                              x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="inline size-28 text-success" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                              </svg>
+
+                              <div class="mt-4" style="width: 200px;">
+                                <h2 class="text-2xl text-slate-700 dark:text-navy-100">
+                                  퇴실 완료
+                                </h2>
+                                <p class="mt-2">
+
+                                </p>
+                                <button @click="showModal = false"
+                                  class="btn mt-6 bg-success font-medium text-white hover:bg-success-focus focus:bg-success-focus active:bg-success-focus/90">
+                                  Close
+                                </button>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </template>
+                        </template>
+                      </div>
+
+                      <div class="mask is-reuleaux-triangle absolute top-0 right-0 -m-3 size-16 bg-white/20"></div>
                     </div>
-                    
-                    <div class="mask is-reuleaux-triangle absolute top-0 right-0 -m-3 size-16 bg-white/20"></div>
-                  </div>
-                  
-                    
+
+
                   </div>
                   <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                 </div>
@@ -2492,14 +2448,14 @@
             담당 강사: 김강사
           </p>
         </div>
-      
+
         <div class="mt-5 px-[var(--margin-x)] transition-all duration-[.25s]">
           <p class="text-base font-medium text-slate-700 dark:text-navy-100">
             커리큘럼 과정
           </p>
-          
+
         </div>
-        
+
         <div class="flex">
           <div
             class="swiper mx-0 mt-4 px-[var(--margin-x)] transition-all duration-[.25s] swiper-initialized swiper-horizontal swiper-backface-hidden"
@@ -2528,13 +2484,16 @@
                           d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                       </svg> -->
                       <div class="size-7">
-                        <button class="menu-toggle ml-0.5 flex size-7 flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80" :class="$store.global.isSidebarExpanded &amp;&amp; &#39;active&#39;" @click="$store.global.isSidebarExpanded = !$store.global.isSidebarExpanded">
+                        <button
+                          class="menu-toggle ml-0.5 flex size-7 flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80"
+                          :class="$store.global.isSidebarExpanded &amp;&amp; &#39;active&#39;"
+                          @click="$store.global.isSidebarExpanded = !$store.global.isSidebarExpanded">
                           <span></span>
                           <span></span>
                           <span></span>
                         </button>
                       </div>
-                      
+
                     </a>
                   </div>
                 </div>
@@ -2546,7 +2505,7 @@
                   <p class="font-medium tracking-wide text-slate-700 line-clamp-2 dark:text-navy-100">
                     데이터베이스
                   </p>
-                  
+
                 </div>
 
                 <div class="mt-6">
@@ -2557,7 +2516,10 @@
                   <div class="mt-2 flex items-center justify-between text-secondary dark:text-secondary-light">
                     <a href="#">
                       <div class="size-7">
-                        <button class="menu-toggle ml-0.5 flex size-7 flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80" :class="$store.global.isSidebarExpanded &amp;&amp; &#39;active&#39;" @click="$store.global.isSidebarExpanded = !$store.global.isSidebarExpanded">
+                        <button
+                          class="menu-toggle ml-0.5 flex size-7 flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80"
+                          :class="$store.global.isSidebarExpanded &amp;&amp; &#39;active&#39;"
+                          @click="$store.global.isSidebarExpanded = !$store.global.isSidebarExpanded">
                           <span></span>
                           <span></span>
                           <span></span>
@@ -2583,7 +2545,10 @@
                   <div class="mt-2 flex items-center justify-between text-warning">
                     <a href="#">
                       <div class="size-7">
-                        <button class="menu-toggle ml-0.5 flex size-7 flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80" :class="$store.global.isSidebarExpanded &amp;&amp; &#39;active&#39;" @click="$store.global.isSidebarExpanded = !$store.global.isSidebarExpanded">
+                        <button
+                          class="menu-toggle ml-0.5 flex size-7 flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80"
+                          :class="$store.global.isSidebarExpanded &amp;&amp; &#39;active&#39;"
+                          @click="$store.global.isSidebarExpanded = !$store.global.isSidebarExpanded">
                           <span></span>
                           <span></span>
                           <span></span>
@@ -2609,7 +2574,10 @@
                   <div class="mt-2 flex items-center justify-between text-primary dark:text-accent-light">
                     <a href="#">
                       <div class="size-7">
-                        <button class="menu-toggle ml-0.5 flex size-7 flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80" :class="$store.global.isSidebarExpanded &amp;&amp; &#39;active&#39;" @click="$store.global.isSidebarExpanded = !$store.global.isSidebarExpanded">
+                        <button
+                          class="menu-toggle ml-0.5 flex size-7 flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80"
+                          :class="$store.global.isSidebarExpanded &amp;&amp; &#39;active&#39;"
+                          @click="$store.global.isSidebarExpanded = !$store.global.isSidebarExpanded">
                           <span></span>
                           <span></span>
                           <span></span>
@@ -2636,7 +2604,10 @@
                   <div class="mt-2 flex items-center justify-between text-secondary dark:text-secondary-light">
                     <a href="#">
                       <div class="size-7">
-                        <button class="menu-toggle ml-0.5 flex size-7 flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80" :class="$store.global.isSidebarExpanded &amp;&amp; &#39;active&#39;" @click="$store.global.isSidebarExpanded = !$store.global.isSidebarExpanded">
+                        <button
+                          class="menu-toggle ml-0.5 flex size-7 flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80"
+                          :class="$store.global.isSidebarExpanded &amp;&amp; &#39;active&#39;"
+                          @click="$store.global.isSidebarExpanded = !$store.global.isSidebarExpanded">
                           <span></span>
                           <span></span>
                           <span></span>
@@ -2660,7 +2631,10 @@
                   <div class="mt-2 flex items-center justify-between text-warning">
                     <a href="#">
                       <div class="size-7">
-                        <button class="menu-toggle ml-0.5 flex size-7 flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80" :class="$store.global.isSidebarExpanded &amp;&amp; &#39;active&#39;" @click="$store.global.isSidebarExpanded = !$store.global.isSidebarExpanded">
+                        <button
+                          class="menu-toggle ml-0.5 flex size-7 flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80"
+                          :class="$store.global.isSidebarExpanded &amp;&amp; &#39;active&#39;"
+                          @click="$store.global.isSidebarExpanded = !$store.global.isSidebarExpanded">
                           <span></span>
                           <span></span>
                           <span></span>
@@ -2676,7 +2650,7 @@
         </div>
         <div
           class="mt-4 grid grid-cols-12 gap-4 px-[var(--margin-x)] transition-all duration-[.25s] sm:mt-5 sm:gap-5 lg:mt-6 lg:gap-6">
-          
+
           <div class="col-span-12 sm:col-span-6 lg:col-span-4">
             <div class="flex items-center justify-between">
               <h2 class="font-medium tracking-wide text-slate-700 dark:text-navy-100">
@@ -2756,14 +2730,14 @@
                     </svg>
                   </button>
                 </div>
-              </div>        
+              </div>
               <div class="card p-4">
                 <p class="font-medium text-slate-700 dark:text-navy-100">
                   이거 코드 어케 해야해여?
                 </p>
                 <p class="mt-1 text-xs+">아시는분 좀 알려주세...</p>
                 <div class="mt-4 flex flex-wrap -space-x-2">
-                  
+
                 </div>
                 <div class="mt-2 flex items-end justify-between">
                   <p class="flex items-center space-x-2 text-slate-400 dark:text-navy-300">
@@ -2786,14 +2760,14 @@
                     </svg>
                   </button>
                 </div>
-              </div>        
+              </div>
               <div class="card p-4">
                 <p class="font-medium text-slate-700 dark:text-navy-100">
                   이거 코드 어케 해야해여?
                 </p>
                 <p class="mt-1 text-xs+">아시는분 좀 알려주세...</p>
                 <div class="mt-4 flex flex-wrap -space-x-2">
-                  
+
                 </div>
                 <div class="mt-2 flex items-end justify-between">
                   <p class="flex items-center space-x-2 text-slate-400 dark:text-navy-300">
@@ -2870,14 +2844,14 @@
               </div>
             </div>
             <div class="mt-3 flex flex-col justify-between space-y-4">
-              
+
               <div class="card p-4">
                 <p class="font-medium text-slate-700 dark:text-navy-100">
                   이거 코드 어케 해야해여?
                 </p>
                 <p class="mt-1 text-xs+">아시는분 좀 알려주세...</p>
                 <div class="mt-4 flex flex-wrap -space-x-2">
-                  
+
                 </div>
                 <div class="mt-2 flex items-end justify-between">
                   <p class="flex items-center space-x-2 text-slate-400 dark:text-navy-300">
@@ -2900,14 +2874,15 @@
                     </svg>
                   </button>
                 </div>
-                  
-              </div>        <div class="card p-4">
+
+              </div>
+              <div class="card p-4">
                 <p class="font-medium text-slate-700 dark:text-navy-100">
                   이거 코드 어케 해야해여?
                 </p>
                 <p class="mt-1 text-xs+">아시는분 좀 알려주세...</p>
                 <div class="mt-4 flex flex-wrap -space-x-2">
-                  
+
                 </div>
                 <div class="mt-2 flex items-end justify-between">
                   <p class="flex items-center space-x-2 text-slate-400 dark:text-navy-300">
@@ -2930,14 +2905,15 @@
                     </svg>
                   </button>
                 </div>
-                  
-              </div>        <div class="card p-4">
+
+              </div>
+              <div class="card p-4">
                 <p class="font-medium text-slate-700 dark:text-navy-100">
                   이거 코드 어케 해야해여?
                 </p>
                 <p class="mt-1 text-xs+">아시는분 좀 알려주세...</p>
                 <div class="mt-4 flex flex-wrap -space-x-2">
-                  
+
                 </div>
                 <div class="mt-2 flex items-end justify-between">
                   <p class="flex items-center space-x-2 text-slate-400 dark:text-navy-300">
@@ -3014,14 +2990,14 @@
               </div>
             </div>
             <div class="mt-3 flex flex-col justify-between space-y-4">
-              
+
               <div class="card p-4">
                 <p class="font-medium text-slate-700 dark:text-navy-100">
                   이거 코드 어케 해야해여?
                 </p>
                 <p class="mt-1 text-xs+">아시는분 좀 알려주세...</p>
                 <div class="mt-4 flex flex-wrap -space-x-2">
-                  
+
                 </div>
                 <div class="mt-2 flex items-end justify-between">
                   <p class="flex items-center space-x-2 text-slate-400 dark:text-navy-300">
@@ -3044,14 +3020,15 @@
                     </svg>
                   </button>
                 </div>
-                  
-              </div>        <div class="card p-4">
+
+              </div>
+              <div class="card p-4">
                 <p class="font-medium text-slate-700 dark:text-navy-100">
                   이거 코드 어케 해야해여?
                 </p>
                 <p class="mt-1 text-xs+">아시는분 좀 알려주세...</p>
                 <div class="mt-4 flex flex-wrap -space-x-2">
-                  
+
                 </div>
                 <div class="mt-2 flex items-end justify-between">
                   <p class="flex items-center space-x-2 text-slate-400 dark:text-navy-300">
@@ -3074,14 +3051,15 @@
                     </svg>
                   </button>
                 </div>
-                  
-              </div>        <div class="card p-4">
+
+              </div>
+              <div class="card p-4">
                 <p class="font-medium text-slate-700 dark:text-navy-100">
                   이거 코드 어케 해야해여?
                 </p>
                 <p class="mt-1 text-xs+">아시는분 좀 알려주세...</p>
                 <div class="mt-4 flex flex-wrap -space-x-2">
-                  
+
                 </div>
                 <div class="mt-2 flex items-end justify-between">
                   <p class="flex items-center space-x-2 text-slate-400 dark:text-navy-300">
@@ -3111,7 +3089,7 @@
       </main>
     </div>
 
- 
+
     <!-- 
         This is a place for Alpine.js Teleport feature 
         @see https://alpinejs.dev/directives/teleport
@@ -3145,6 +3123,53 @@
       </div>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script>
+    const getCurriculum = async () => {
+      await axios
+        .get(`https://example.com/api/curriculum/`,{withCredentials: true})
+        .then((response) => {
+          return response.data.curriculum;
+        })
+        .catch((error) => {
+          console.error('Error fetching data: ', error);
+        });
+    }
+
+    const getTest = async () => {
+      await axios
+        .get(`https://example.com/api/test/`,{withCredentials: true})
+        .then((response) => {
+          return response.data.test;
+        })
+        .catch((error) => {
+          console.error('Error fetching data: ', error);
+        });
+    }
+
+    const getHomework = async () => {
+      await axios
+        .get(`https://example.com/api/homework/`,{withCredentials: true})
+        .then((response) => {
+          return response.data.homework;
+        })
+        .catch((error) => {
+          console.error('Error fetching data: ', error);
+        });
+    }
+
+    const getAskBoard = async () => {
+      await axios
+        .get(`https://example.com/api/ask/`,{withCredentials: true})
+        .then((response) => {
+          return response.data.ask;
+        })
+        .catch((error) => {
+          console.error('Error fetching data: ', error);
+        });
+    }
+  </script>
 </body>
 
 </html>

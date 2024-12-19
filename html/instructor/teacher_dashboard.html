@@ -2855,7 +2855,7 @@ rect.legend-mouseover-inactive,
     <script>
       const getClass = async () => {
       await axios
-        .get(`https://example.com/api/class/`/*,{withCredentials: true// 나중에 배울거라고 함. 일단 더미 코드}*/
+        .get(`https://example.com/api/class/`,{withCredentials: true}// 나중에 배울거라고 함. 일단 더미 코드
         )
         .then((response) => {
           return response.data.class;

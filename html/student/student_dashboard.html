@@ -3164,7 +3164,7 @@
   <script>
     const getCurriculum = async () => {
       await axios
-        .get(`https://example.com/api/curriculum/`/*,{withCredentials: true// 나중에 배울거라고 함. 일단 더미 코드}*/
+        .get(`https://example.com/api/curriculum/`,{withCredentials: true}// 나중에 배울거라고 함. 일단 더미 코드
         )
         .then((response) => {
           return response.data.curriculum;
@@ -3176,7 +3176,7 @@
 
     const getAttendence = async () => {
       await axios
-        .get(`https://example.com/api/attendence/`)
+        .get(`https://example.com/api/attendence/`,{withCredentials: true})
         .then((response) => {
           return response.data.attendence;
         })
@@ -3187,7 +3187,7 @@
 
     const getHomework = async () => {
       await axios
-        .get(`https://example.com/api/homework/`)
+        .get(`https://example.com/api/homework/`,{withCredentials: true})
         .then((response) => {
           return response.data.homework;
         })
@@ -3198,7 +3198,7 @@
 
     const getAskBoard = async () => {
       await axios
-        .get(`https://example.com/api/ask/`)
+        .get(`https://example.com/api/ask/`,{withCredentials: true})
         .then((response) => {
           return response.data.ask;
         })
