@@ -954,16 +954,13 @@
                   </div>
                 </li>
               </ol>
-
-
-
-
             </div>
           </div>
-
-
         </div>
       </div>
+
+
+
       <div id="header"></div>
 
       <!-- App Header Wrapper-->
@@ -1469,7 +1466,7 @@
                       class="swiper-slide relative flex h-32 w-56 flex-col overflow-hidden rounded-2xl shadow-lg bg-gradient-to-br from-blue-500 to-purple-600 p-4">
                       <!-- 휴가 신청 버튼 -->
                       <div x-data="{ showModal: false }">
-                        <button @click="showModal = true; $store.global.isRightSidebarExpanded = false;"
+                        <button @click="showModal = true; $store.global.isRightSidebarExpanded = false;" id="find_huga"
                           class="btn rounded-lg bg-white font-semibold text-blue-700 shadow-md transition hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700">
                           휴가 신청
                         </button>
@@ -1515,11 +1512,11 @@
                                   <span class="font-medium text-gray-600 dark:text-gray-300">
                                     휴가 유형 선택:
                                   </span>
-                                  <select
+                                  <select id="leaveType"
                                     class="form-select mt-1.5 w-full rounded-lg border border-gray-300 bg-white px-3 py-2 hover:border-gray-400 focus:ring-2 focus:ring-blue-400 dark:border-gray-700 dark:bg-gray-800 dark:focus:ring-blue-500">
-                                    <option>휴가</option>
-                                    <option>병가</option>
-                                    <option>기타</option>
+                                    <option value="휴가">휴가</option>
+                                    <option value="병가">병가</option>
+                                    <option value="기타">기타</option>
                                   </select>
                                 </label>
 
@@ -1540,7 +1537,7 @@
                                   class="btn rounded-full bg-gray-100 px-4 py-2 text-gray-800 hover:bg-gray-200 focus:ring-2 focus:ring-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600">
                                   취소
                                 </button>
-                                <button @click="showModal = false"
+                                <button @click="showModal = false" id="huga_btn"
                                   class="btn rounded-full bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 dark:bg-blue-500 dark:hover:bg-blue-600">
                                   신청
                                 </button>
@@ -1564,7 +1561,7 @@
                       class="swiper-slide relative flex h-32 w-56 flex-col overflow-hidden rounded-2xl shadow-lg bg-gradient-to-br from-green-500 to-blue-600 p-4">
                       <!-- 조퇴 신청 버튼 -->
                       <div x-data="{ showModal: false }">
-                        <button @click="showModal = true ,$store.global.isRightSidebarExpanded = false;"
+                        <button @click="showModal = true ,$store.global.isRightSidebarExpanded = false;" id="find_jotae"
                           class="btn rounded-lg bg-white font-semibold text-green-700 shadow-md transition hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-green-400 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700">
                           조퇴 신청
                         </button>
@@ -1637,7 +1634,7 @@
                                   class="btn rounded-full bg-gray-100 px-4 py-2 text-gray-800 hover:bg-gray-200 focus:ring-2 focus:ring-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600">
                                   취소
                                 </button>
-                                <button @click="showModal = false"
+                                <button @click="showModal = false" id="jotae_btn"
                                   class="btn rounded-full bg-green-600 px-4 py-2 text-white hover:bg-green-700 focus:ring-2 focus:ring-green-400 dark:bg-green-500 dark:hover:bg-green-600">
                                   신청
                                 </button>
@@ -1657,7 +1654,7 @@
                   <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                 </div>
               </div>
-               <!-- <div class="mt-4 px-3">
+              <!-- <div class="mt-4 px-3">
                 <h2 class="text-xs+ font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100">
                   Pinned Apps
                 </h2>
@@ -2643,6 +2640,10 @@
             x-init="$nextTick(()=&gt;new Swiper($el,{  slidesPerView: &#39;auto&#39;, spaceBetween: 18}))">
             <div class="swiper-wrapper" id="swiper-wrapper-ebe87e3b10cd3dc74" aria-live="polite"
               style="transform: translate3d(0px, 0px, 0px);">
+
+
+
+
               <div
                 class="card swiper-slide flex w-72 shrink-0 justify-between rounded-xl border-l-4 border-primary p-4 swiper-slide-active"
                 role="group" aria-label="1 / 6" style="margin-right: 18px;">
@@ -2653,8 +2654,9 @@
                 </div>
 
                 <div class="mt-6">
-                  <div x-tooltip.primary="&#39;0% Completed&#39;" class="progress h-1 bg-slate-150 dark:bg-navy-500">
-                    <div class="w-0/12 rounded-full bg-primary dark:bg-accent"></div>
+                  <div x-tooltip.primary="&#39;0% Completed&#39;"
+                    class="progress h-1 bg-slate-150 dark:bg-navy-500 tooltip">
+                    <div class="w-0.8/12 rounded-full bg-primary dark:bg-accent"></div>
                   </div>
 
                   <div class="mt-2 flex items-center justify-between text-primary dark:text-accent-light">
@@ -2679,6 +2681,8 @@
                   </div>
                 </div>
               </div>
+
+
               <div
                 class="card swiper-slide flex w-72 shrink-0 justify-between rounded-xl border-l-4 border-secondary p-4 swiper-slide-next"
                 role="group" aria-label="2 / 6" style="margin-right: 18px;">
@@ -2710,6 +2714,9 @@
                   </div>
                 </div>
               </div>
+
+
+              
               <div class="card swiper-slide flex w-72 shrink-0 justify-between rounded-xl border-l-4 border-warning p-4"
                 role="group" aria-label="3 / 6" style="margin-right: 18px;">
                 <div>
@@ -2861,7 +2868,7 @@
             <div class="card justify-between p-5">
               <p class="font-medium">출석</p>
               <div class="flex items-center justify-between pt-4">
-                <p class="text-3xl font-semibold text-slate-700 dark:text-navy-100">
+                <p class="text-3xl font-semibold text-slate-700 dark:text-navy-100 chool">
                   0
                 </p>
                 <svg xmlns="http://www.w3.org/2000/svg" class="size-10 text-primary dark:text-accent" fill="none"
@@ -2874,7 +2881,7 @@
             <div class="card justify-between p-5">
               <p class="font-medium">남은 휴가</p>
               <div class="flex items-center justify-between pt-4">
-                <p class="text-3xl font-semibold text-slate-700 dark:text-navy-100">
+                <p class="text-3xl font-semibold text-slate-700 dark:text-navy-100 huga">
                   999
                 </p>
                 <svg xmlns="http://www.w3.org/2000/svg" class="size-10 text-primary dark:text-accent" fill="none"
@@ -2886,8 +2893,8 @@
             </div>
             <div class="card justify-between p-5">
               <p class="font-medium">지각</p>
-              <div class="flex items-center justify-between pt-4">
-                <p class="text-3xl font-semibold text-slate-700 dark:text-navy-100">
+              <div class="flex items-center justify-between pt-4 ">
+                <p class="text-3xl font-semibold text-slate-700 dark:text-navy-100 delay">
                   0
                 </p>
                 <svg xmlns="http://www.w3.org/2000/svg" class="size-10 text-secondary dark:text-secondary-light"
@@ -2902,7 +2909,7 @@
               <p class="font-medium">조퇴</p>
               <div class="flex items-center justify-between pt-4">
                 <p class="text-slate-700 dark:text-navy-100">
-                  <span class="text-3xl font-semibold">0</span>
+                  <span class="text-3xl font-semibold jotae">0</span>
                   <!-- <span class="text-xl font-medium">21m</span> -->
                 </p>
                 <svg xmlns="http://www.w3.org/2000/svg" class="size-10 text-warning" fill="none" viewBox="0 0 24 24"
@@ -2916,7 +2923,7 @@
             <div class="card justify-between p-5">
               <p class="font-medium">외출</p>
               <div class="flex items-center justify-between pt-4">
-                <p class="text-3xl font-semibold text-slate-700 dark:text-navy-100">
+                <p class="text-3xl font-semibold text-slate-700 dark:text-navy-100 outside">
                   0
                 </p>
                 <svg xmlns="http://www.w3.org/2000/svg" class="size-10 text-success" fill="none" viewBox="0 0 24 24"
@@ -2933,7 +2940,7 @@
               <h2 class="font-medium tracking-wide text-slate-700 dark:text-navy-100">
                 게시판
               </h2>
-              <a x-data="usePopper({placement:'bottom-end', offset:4})" href="/html/common/board.html"
+              <a x-data="usePopper({placement:'bottom-end', offset:4})" href="/html/common/board_list.html"
                 @click.outside="isShowPopper && (isShowPopper = false)" class="inline-flex">
                 <button x-ref="popperRef" @click="isShowPopper = !isShowPopper"
                   class="btn size-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25">
@@ -3129,8 +3136,151 @@
         @see https://alpinejs.dev/directives/teleport
       -->
     <div id="x-teleport-target"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.
+min.js"></script>
     <script>
       window.addEventListener("DOMContentLoaded", () => Alpine.start());
+
+      //출석 정보 불러오기기
+      const getList = async () => {
+        await axios
+          .get('https://0680c256-7cab-4754-bed0-6e37fa22faa6.mock.pstmn.io/get_huga')
+          .then((response) => {
+
+            console.log(response.data);
+            document.querySelector(".huga").innerHTML = response.data.huga;
+            document.querySelector(".chool").innerHTML = response.data.chool;
+            document.querySelector(".jotae").innerHTML = response.data.jotae;
+            document.querySelector(".outside").innerHTML = response.data.outside;
+            document.querySelector(".delay").innerHTML = response.data.delay;
+            return response.data;
+          })
+          .catch((error) => {
+            console.error('Error fetching data:', error);
+          });
+      }
+
+
+      const response = getList();
+
+      //커리큘럼 진행도 
+
+      const getcurry_percent = async () => {
+        await axios
+          .get('https://0680c256-7cab-4754-bed0-6e37fa22faa6.mock.pstmn.io/curry')
+          .then((response) => {
+            // <div x-tooltip.primary="&#39;0% Completed&#39;" class="progress h-1 bg-slate-150 dark:bg-navy-500">
+
+
+            console.log(response.data.curry1);
+            const tooltipElement = document.querySelector(".tooltip");
+            tooltipElement.setAttribute('x-tooltip.primary', `'${response.data.curry1.percent} Completed'`);
+
+            return response.data;
+          })
+          .catch((error) => {
+            console.error('Error fetching data:', error);
+          });
+      }
+      const curry_response = getcurry_percent();
+
+
+      // 휴가 post 
+      const post_huga = async () => {
+        const selectElement = document.querySelector("#leaveType");
+        const selectedOption = selectElement.value;
+
+        try {
+          const response = await axios.post('https://0680c256-7cab-4754-bed0-6e37fa22faa6.mock.pstmn.io/huga', {
+            leaveType: selectedOption
+          }, {
+            headers: {
+              "Content-Type": "application/json"
+            }
+          });
+          console.log('POST Response:', selectedOption);
+          console.log(response.data);
+
+        } catch (error) {
+          console.error('Error:', error);
+          // 에러 처리 로직
+        }
+      };
+
+      
+      document.querySelector("#find_huga").addEventListener("click", () => {
+        console.log("휴가 신청 준비 중");
+
+        // `#huga_btn` 클릭 시 `post_huga` 실행
+        document.querySelector("#huga_btn").addEventListener("click", () => {
+          console.log("휴가 신청 버튼 클릭됨");
+          post_huga();
+        }, { once: true }); // `once: true`로 중복 이벤트 방지
+      });
+      // 버튼 클릭 시 post_huga 함수 호출
+
+
+
+
+      const post_jotae = async () => {
+        const reasonTextarea = document.querySelector("textarea"); // 조퇴 사유 입력란
+        const timeInput = document.querySelector("input[type='time']"); // 조퇴 예정 시간 입력란
+
+        const reason = reasonTextarea.value; // 조퇴 사유
+        const time = timeInput.value; // 조퇴 예정 시간
+          ////////////////////////////////
+          ////////////////////////////////
+          ////////////////////////////////
+          ////////////////////////////////
+          ////////////////////////////////
+          //////조퇴 사유 잘 안 넘어감 나중에 고쳐야함 axios 는 대충 작성 완료료/////////
+          ////////////////////////////////
+          ////////////////////////////////
+          ////////////////////////////////
+          ////////////////////////////////
+          ////////////////////////////////
+          ////////////////////////////////
+          ////////////////////////////////
+          ////////////////////////////////
+          ////////////////////////////////
+          console.log('조퇴 사유:', reason);
+        console.log('조퇴 예정 시간:', time);
+
+        // 서버로 데이터를 보내는 예시
+        try {
+          const response = await axios.post('https://0680c256-7cab-4754-bed0-6e37fa22faa6.mock.pstmn.io/huga', {
+            reason: reason,
+            time: time
+          }, {
+            headers: {
+              "Content-Type": "application/json"
+            }
+          });
+          
+          console.log('POST Response:', response.data);
+          
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      };
+      document.querySelector("#find_jotae").addEventListener("click", () => {
+        console.log("조퇴 신청 준비 중");
+
+        // `#huga_btn` 클릭 시 `post_huga` 실행
+        document.querySelector("#jotae_btn").addEventListener("click", () => {
+          console.log("조퇴 신청 버튼 클릭됨");
+          post_jotae();
+        }, { once: true }); // `once: true`로 중복 이벤트 방지
+      });
+
+
+
+      
+
+
+      
+
     </script>
 
 

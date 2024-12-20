@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta tags  -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+
+  <title>Personal-inform</title>
+  <link rel="icon" type="image/png" href="/files/images/logo/app-logo.svg" />
+
+  <!-- CSS Assets -->
+  <link rel="stylesheet" href="/files/css/app.css" />
+
+  <!-- Javascript Assets -->
+  <script src="/files/js/app.js.다운로드" defer></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+  <script>
+    /**
+     * THIS SCRIPT REQUIRED FOR PREVENT FLICKERING IN SOME BROWSERS
+     */
+    localStorage.getItem("_x_darkMode_on") === "true" &&
+      document.documentElement.classList.add("dark");
+
+    fetch("/html/common/new_sidebar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+
+      })
+      .catch(error => console.error('Error loading header:', error));
+  </script>
+</head>
+
+<body x-data class="is-header-blur" x-bind="$store.global.documentBody">
+  <!-- App preloader-->
+  <div class="app-preloader fixed z-50 grid h-full w-full place-content-center bg-slate-50 dark:bg-navy-900">
+    <div class="app-preloader-inner relative inline-block size-48"></div>
+  </div>
+
+  <!-- Page Wrapper -->
+  <div id="root" class="min-h-100vh flex grow bg-slate-50 dark:bg-navy-900" x-cloak>
+    <!-- Sidebar -->
+    <div class="sidebar print:hidden">
+      <!-- Main Sidebar -->
+      <div class="main-sidebar">
+        <div
+          class="flex h-full w-full flex-col items-center border-r border-slate-150 bg-white dark:border-navy-700 dark:bg-navy-800">
+          <!-- Application Logo -->
+          <div class="flex pt-4">
+            <a href="/">
+              <img class="size-11 transition-transform duration-500 ease-in-out hover:rotate-[360deg]"
+                src="/files/images/logo/app-logo.svg" alt="logo" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Panel -->
+      <div class="sidebar-panel">
+        <div class="flex h-full grow flex-col bg-white pl-[var(--main-sidebar-width)] dark:bg-navy-750">
+          <!-- Sidebar Panel Header -->
+          <div class="flex h-18 w-full items-center justify-between pl-4 pr-1">
+            <p class="text-base tracking-wider text-slate-800 dark:text-navy-100">
+              Form
+            </p>
+            <button @click="$store.global.isSidebarExpanded = false"
+              class="btn h-7 w-7 rounded-full p-0 text-primary hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:text-accent-light/80 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25 xl:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Sidebar Panel Body -->
+          <div x-data="{expandedItem:null}" class="h-[calc(100%-4.5rem)] overflow-x-hidden pb-6"
+            x-init="$el._x_simplebar = new SimpleBar($el);">
+            <ul class="flex flex-1 flex-col px-4 font-inter">
+              <li>
+                <a x-data="navLink" href="form-layout-1.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Form layout v1
+                </a>
+              </li>
+
+              <li>
+                <a x-data="navLink" href="form-layout-2.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Form layout v2
+                </a>
+              </li>
+
+              <li>
+                <a x-data="navLink" href="form-layout-3.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Form layout v3
+                </a>
+              </li>
+
+              <li>
+                <a x-data="navLink" href="form-layout-4.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Form layout v4
+                </a>
+              </li>
+
+              <li>
+                <a x-data="navLink" href="form-layout-5.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Form layout v5
+                </a>
+              </li>
+            </ul>
+            <div class="my-3 mx-4 h-px bg-slate-200 dark:bg-navy-500"></div>
+            <ul class="flex flex-1 flex-col px-4 font-inter">
+              <li>
+                <a x-data="navLink" href="form-input-text.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Input text
+                </a>
+              </li>
+              <li>
+                <a x-data="navLink" href="form-input-group.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Input group
+                </a>
+              </li>
+              <li>
+                <a x-data="navLink" href="form-input-mask.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Input mask
+                </a>
+              </li>
+              <li>
+                <a x-data="navLink" href="form-checkbox.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Checkbox
+                </a>
+              </li>
+              <li>
+                <a x-data="navLink" href="form-radio.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Radio
+                </a>
+              </li>
+              <li>
+                <a x-data="navLink" href="form-switch.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Switch
+                </a>
+              </li>
+              <li>
+                <a x-data="navLink" href="form-select.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Select
+                </a>
+              </li>
+              <li>
+                <a x-data="navLink" href="form-tom-select.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Tom select
+                </a>
+              </li>
+              <li>
+                <a x-data="navLink" href="form-textarea.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Textarea
+                </a>
+              </li>
+              <li>
+                <a x-data="navLink" href="form-range.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Range
+                </a>
+              </li>
+              <li>
+                <a x-data="navLink" href="form-datepicker.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Datepicker
+                </a>
+              </li>
+              <li>
+                <a x-data="navLink" href="form-timepicker.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Timepicker
+                </a>
+              </li>
+              <li>
+                <a x-data="navLink" href="form-datetimepicker.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Datetimepicker
+                </a>
+              </li>
+              <li>
+                <a x-data="navLink" href="form-richtexteditor.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Text editor
+                </a>
+              </li>
+              <li>
+                <a x-data="navLink" href="form-upload.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Form upload
+                </a>
+              </li>
+              <li>
+                <a x-data="navLink" href="form-validation.html"
+                  :class="isActive ? 'font-medium text-primary dark:text-accent-light' : 'text-slate-600 hover:text-slate-900 dark:text-navy-200 dark:hover:text-navy-50'"
+                  class="flex py-2 text-xs+ tracking-wide outline-none transition-colors duration-300 ease-in-out">
+                  Form validation
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- App Header Wrapper-->
+    <div id="header"></div>
+
+    <!-- Main Content Wrapper -->
+    <main class="main-content w-full px-[var(--margin-x)] pb-8">
+
+      <div class="grid grid-cols-12 gap-4 sm:gap-5 lg:gap-6">
+        <div class="col-span-12 grid lg:col-span-2 lg:place-items-center">
+
+        </div>
+        <div class="col-span-12 grid lg:col-span-8">
+          <div class="card">
+            <div class="border-b border-slate-200 p-4 dark:border-navy-500 sm:px-5">
+              <div class="flex items-center space-x-2">
+                <div
+                  class="flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 p-1 text-primary dark:bg-accent-light/10 dark:text-accent-light">
+                  <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <h4 class="text-lg font-medium text-slate-700 dark:text-navy-100">
+                  과제제출 </h4>
+              </div>
+            </div>
+            <div class="space-y-4 p-4 sm:p-5">
+              <label class="block">
+                <span>학생 이름</span>
+
+                <input
+                  class="form-input mt-1.5 w-full rounded-lg border border-slate-300 bg-transparent px-3 py-2 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
+                  placeholder="Enter product name" type="text">
+              </label>
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <label class="block">
+                  <span>과제</span>
+                  <select class="mt-1.5 w-full tomselected ts-hidden-accessible"
+                    x-init="$el._x_tom = new Tom($el,{create: true,sortField: {field: &#39;text&#39;,direction: &#39;asc&#39;}})"
+                    id="tomselect-1" tabindex="-1">
+
+                    <option value="backend">백엔드</option>
+                    <option value="home">Home</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <div class="ts-wrapper mt-1.5 w-full single full has-items input-hidden">
+                    <div class="ts-control">
+                      <div data-value="Digital" class="item" data-ts-item="">Digital</div><input type="text"
+                        autocomplete="off" size="1" tabindex="0" role="combobox" aria-haspopup="listbox"
+                        aria-expanded="false" aria-controls="tomselect-1-ts-dropdown" id="tomselect-1-ts-control"
+                        aria-activedescendant="tomselect-1-opt-1">
+                    </div>
+                    <div class="ts-dropdown single" style="display: none; visibility: visible;">
+                      <div role="listbox" tabindex="-1" class="ts-dropdown-content" id="tomselect-1-ts-dropdown">
+                        <div data-selectable="" data-value="Digital" class="option selected active" role="option"
+                          id="tomselect-1-opt-1" aria-selected="true">Digital</div>
+                        <div data-selectable="" data-value="Home" class="option" role="option" id="tomselect-1-opt-3">
+                          Home</div>
+                        <div data-selectable="" data-value="Other" class="option" role="option" id="tomselect-1-opt-4">
+                          Other</div>
+                        <div data-selectable="" data-value="Technology" class="option" role="option"
+                          id="tomselect-1-opt-2">Technology</div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+
+
+              </div>
+              <div>
+                <span>Images</span>
+                <div class="filepond fp-bordered fp-grid mt-1.5 [--fp-grid:2]">
+                  <div class="filepond--root filepond--hopper" data-style-button-remove-item-position="left"
+                    data-style-button-process-item-position="right" data-style-load-indicator-position="right"
+                    data-style-progress-indicator-position="right" data-style-button-remove-item-align="false"
+                    style="height: 76px;"><input class="filepond--browser" type="file" id="filepond--browser-pjmrgyhnf"
+                      name="filepond" aria-controls="filepond--assistant-pjmrgyhnf"
+                      aria-labelledby="filepond--drop-label-pjmrgyhnf" multiple=""><a class="filepond--credits"
+                      href="https://pqina.nl/" tabindex="-1" target="_blank" rel="noopener noreferrer"
+                      style="transform: translateY(68px);">Powered by PQINA</a>
+                    <div class="filepond--drop-label" style="transform: translate3d(0px, 0px, 0px); opacity: 1;"><label
+                        for="filepond--browser-pjmrgyhnf" id="filepond--drop-label-pjmrgyhnf">Drag &amp; Drop your files
+                        or <span class="filepond--label-action" tabindex="0">Browse</span></label></div>
+                    <div class="filepond--list-scroller" style="transform: translate3d(0px, 60px, 0px);">
+                      <ul class="filepond--list" role="list"></ul>
+                    </div>
+                    <div class="filepond--panel filepond--panel-root" data-scalable="true">
+                      <div class="filepond--panel-top filepond--panel-root"></div>
+                      <div class="filepond--panel-center filepond--panel-root"
+                        style="transform: translate3d(0px, 8px, 0px) scale3d(1, 0.6, 1);"></div>
+                      <div class="filepond--panel-bottom filepond--panel-root"
+                        style="transform: translate3d(0px, 68px, 0px);"></div>
+                    </div><span class="filepond--assistant" id="filepond--assistant-pjmrgyhnf" role="status"
+                      aria-live="polite" aria-relevant="additions"></span>
+                    <div class="filepond--drip"></div>
+                    <fieldset class="filepond--data"></fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-center space-x-2 pt-4">
+
+                <button id="send_homework"
+                  class="btn space-x-2 bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90">
+                  <span>제출</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- 
+        This is a place for Alpine.js Teleport feature 
+        @see https://alpinejs.dev/directives/teleport
+      -->
+    <div id="x-teleport-target"></div>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => Alpine.start());
+
+
+
+      const send_btn = document.querySelector("#send_homework");
+      send_btn.addEventListener("click", () => {
+
+
+
+      })
+
+
+
+
+      const send_ = () => {
+        const username = document.querySelector("#username").value;
+        const password = document.querySelector("#password").value;
+
+
+        axios
+          .post('http://localhost:8080/login', {
+            username: username,
+            password: password
+          }, { headers: { "Content-Type": "application/json" } })
+          .then((response) => {
+            console.log('POST Response:', response.data);
+          })
+          .catch((error) => { console.error('Error:', error); });
+      }
+
+      const loginBtn = document.querySelector("#loginBtn");
+      loginBtn.addEventListener("click", login);
+    </script>
+</body>
+
+</html>
